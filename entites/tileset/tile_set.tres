@@ -1,8 +1,9 @@
-[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://1ibioajniymd"]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://1ibioajniymd"]
 
 [ext_resource type="Texture2D" uid="uid://bttkvlkk2mo38" path="res://entites/tileset/landscape.png" id="1_72q55"]
 [ext_resource type="Texture2D" uid="uid://bgqon6e0edhlc" path="res://entites/tileset/castle.png" id="2_qmx6s"]
 [ext_resource type="Texture2D" uid="uid://dgdfysangvdrs" path="res://entites/tileset/mushrooms.png" id="3_t627w"]
+[ext_resource type="Texture2D" uid="uid://c8ccto47vuh6n" path="res://entites/tileset/flag.png" id="4_hwa48"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7a3dw"]
 texture = ExtResource("1_72q55")
@@ -133,8 +134,15 @@ texture = ExtResource("3_t627w")
 4:1/0 = 0
 4:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ew08m"]
+texture = ExtResource("4_hwa48")
+1:0/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7a3dw")
 sources/1 = SubResource("TileSetAtlasSource_w6occ")
 sources/2 = SubResource("TileSetAtlasSource_yg534")
+sources/3 = SubResource("TileSetAtlasSource_ew08m")
