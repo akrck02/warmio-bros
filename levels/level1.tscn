@@ -151,7 +151,7 @@ scale = Vector2(3.5175, 3.5175)
 texture = ExtResource("8_ihtiv")
 
 [node name="Player" parent="." instance=ExtResource("1_a0kls")]
-position = Vector2(3414, -537)
+position = Vector2(591, -322)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
