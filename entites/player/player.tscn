@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://bb7sxlv82ymtx"]
+
+[ext_resource type="Script" path="res://entites/player/player.gd" id="1_54dlw"]
+[ext_resource type="Texture2D" uid="uid://cnjni6g2g472g" path="res://entites/player/sprites/wormalio.png" id="2_2vryi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eb1vq"]
+radius = 29.0
+height = 100.0
+
+[sub_resource type="Animation" id="Animation_08uns"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_aw3bo"]
+resource_name = "move"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.433333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pri02"]
+_data = {
+"RESET": SubResource("Animation_08uns"),
+"move": SubResource("Animation_aw3bo")
+}
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_54dlw")
+gravity = 2.0
+jump = 1.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
+position = Vector2(1, 6)
+shape = SubResource("CapsuleShape2D_eb1vq")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(7, 7)
+texture = ExtResource("2_2vryi")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pri02")
+}
