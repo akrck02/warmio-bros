@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://crjumji1tx8v"]
 
 [ext_resource type="Script" path="res://entites/coin/coin.gd" id="1_2igfd"]
-[ext_resource type="Texture2D" uid="uid://h76mruahlxxm" path="res://entites/coin/sprites/coin.png" id="1_we1ko"]
+[ext_resource type="Texture2D" uid="uid://bttkvlkk2mo38" path="res://entites/tileset/platformer.png" id="2_ysmvv"]
 
 [sub_resource type="Animation" id="Animation_gaw8u"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [Vector2i(10, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_o7p33"]
@@ -25,14 +25,14 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.133333, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0, 1, 2]
+"values": [Vector2i(13, 0), Vector2i(14, 0), Vector2i(15, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jmnrw"]
@@ -45,12 +45,15 @@ _data = {
 radius = 6.0
 
 [node name="Coin" type="Node2D"]
+scale = Vector2(7, 7)
 script = ExtResource("1_2igfd")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("1_we1ko")
-hframes = 3
+texture = ExtResource("2_ysmvv")
+hframes = 32
+vframes = 32
+frame = 10
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

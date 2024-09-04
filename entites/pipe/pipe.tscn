@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cyieo3c0ayifs"]
 
-[ext_resource type="Texture2D" uid="uid://bsvvc4e54rjar" path="res://entites/pipe/sprites/pipe.png" id="1_fqqgn"]
+[ext_resource type="Texture2D" uid="uid://bttkvlkk2mo38" path="res://entites/tileset/platformer.png" id="1_u2ud3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nktb7"]
 size = Vector2(120, 124)
@@ -9,7 +9,10 @@ size = Vector2(120, 124)
 
 [node name="Pipe" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
-texture = ExtResource("1_fqqgn")
+texture = ExtResource("1_u2ud3")
+hframes = 16
+vframes = 16
+frame = 52
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)

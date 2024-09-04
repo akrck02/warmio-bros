@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxqcpkn6bwsph"
-path="res://.godot/imported/wormuigi.png-8d6786aeb82e498a7570232aab918216.ctex"
+uid="uid://bttkvlkk2mo38"
+path="res://.godot/imported/platformer.png-1a385dea79264b4b4c3a311e628fd1fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entites/player/sprites/wormuigi.png"
-dest_files=["res://.godot/imported/wormuigi.png-8d6786aeb82e498a7570232aab918216.ctex"]
+source_file="res://entites/tileset/platformer.png"
+dest_files=["res://.godot/imported/platformer.png-1a385dea79264b4b4c3a311e628fd1fe.ctex"]
 
 [params]
 

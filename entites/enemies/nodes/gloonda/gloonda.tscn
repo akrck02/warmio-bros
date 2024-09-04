@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8q2dn0h684si"]
+[gd_scene load_steps=10 format=3 uid="uid://n5u1ni5sbpni"]
 
-[ext_resource type="Texture2D" uid="uid://1liqtgfqqpj3" path="res://entites/enemies/nodes/gloonda/gloonda.png" id="1_31d4m"]
 [ext_resource type="Script" path="res://entites/enemies/nodes/gloonda/gloonda.gd" id="1_d0q5i"]
+[ext_resource type="Texture2D" uid="uid://bttkvlkk2mo38" path="res://entites/tileset/platformer.png" id="2_kevct"]
 [ext_resource type="PackedScene" uid="uid://cgf3oppkiprbc" path="res://mecanics/wander/wander.tscn" id="3_xjbj3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_le8jh"]
@@ -25,7 +25,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [87]
 }
 
 [sub_resource type="Animation" id="Animation_uufi2"]
@@ -42,7 +42,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4, 0.833333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0, 1, 2]
+"values": [87, 88, 89]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_urom3"]
@@ -62,8 +62,10 @@ debug_color = Color(0.764706, 0.419608, 0.113725, 0.6)
 [node name="Gloonda" type="Sprite2D" parent="."]
 position = Vector2(0, -2)
 scale = Vector2(6, 6)
-texture = ExtResource("1_31d4m")
-hframes = 3
+texture = ExtResource("2_kevct")
+hframes = 32
+vframes = 32
+frame = 87
 
 [node name="WeakArea" type="Area2D" parent="."]
 
